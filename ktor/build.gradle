@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+group 'tech.youclap.klap'
+
+repositories {
+    mavenCentral()
+    maven { url = "https://jitpack.io" }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    compileOnly "io.ktor:ktor-server-core:1.2.4"
+
+    // TODO maybe could be used https://github.com/Kotlin/KEEP/blob/master/proposals/stdlib/result.md instead but there
+    //  is no support to be used as a return type
+    implementation "com.github.kittinunf.result:result:2.2.0"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
