@@ -11,7 +11,6 @@ import tech.youclap.klap.ktor.model.KlapException
 
 fun ApplicationCall.requestHeader(name: String) =
     request.header(name)
-        ?: throw KlapException.HeaderNotFound(name)
 
 // TODO maybe rename to result?
 suspend fun ApplicationCall.respondResult(result: Result<*, HttpError>, successHttpStatusCode: HttpStatusCode = OK) {
