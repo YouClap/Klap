@@ -1,4 +1,4 @@
-package tech.youclap.klap.ktor.model.paginated
+package tech.youclap.klap.core.model.paginated
 
 data class Position(
     val current: Int,
